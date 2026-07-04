@@ -10,6 +10,15 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// wwwなしのドメインをwwwにリダイレクト
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  if (host && host === 'kokokara-saiyo.com') {
+    return res.redirect(301, `https://www.kokokara-saiyo.com${req.url}`);
+  }
+  next();
+});
+
 // .html なしのURLをリダイレクト
 const pages = ['register', 'companies', 'company-detail', 'contact', 'tokusho', 'privacy', 'about'];
 pages.forEach(p => {
