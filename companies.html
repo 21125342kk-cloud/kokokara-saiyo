@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業を探す | ここから採用</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">ここから<span>採用</span></div>
+    <nav>
+      <ul>
+        <li><a href="companies.html">企業を探す</a></li>
+        <li><a href="index.html#pricing">料金プラン</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="register.html" class="nav-register">無料で掲載する</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="ph-tag">FIND COMPANIES</span>
+    <h1>企業を探す</h1>
+  </div>
+</div>
+
+<!-- 検索バー -->
+<div class="search-bar-wrap">
+  <div class="search-bar">
+    <select name="industry">
+      <option value="">業種を選ぶ</option>
+      <option>IT・システム開発</option>
+      <option>建設・工事</option>
+      <option>製造・加工</option>
+      <option>物流・運送</option>
+      <option>医療・福祉</option>
+      <option>飲食・フード</option>
+      <option>小売・販売</option>
+      <option>広告・デザイン</option>
+      <option>人材・採用支援</option>
+      <option>コンサルティング</option>
+      <option>その他</option>
+    </select>
+    <select name="area">
+      <option value="">エリアを選ぶ</option>
+      <option>北海道・東北</option>
+      <option>関東</option>
+      <option>中部・北陸</option>
+      <option>近畿</option>
+      <option>中国・四国</option>
+      <option>九州・沖縄</option>
+    </select>
+    <input type="text" placeholder="キーワードで検索（例：WEB制作、清掃、配送）">
+    <button class="btn-search">検索する</button>
+  </div>
+</div>
+
+<!-- 企業一覧 -->
+<section class="companies-section">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="filter-bar">
+      <span class="filter-tag active" data-filter="all">すべて</span>
+      <span class="filter-tag" data-filter="IT・システム開発">IT・システム</span>
+      <span class="filter-tag" data-filter="建設・工事">建設・工事</span>
+      <span class="filter-tag" data-filter="製造・加工">製造</span>
+      <span class="filter-tag" data-filter="物流・運送">物流</span>
+      <span class="filter-tag" data-filter="医療・福祉">医療・福祉</span>
+      <span class="filter-tag" data-filter="広告・デザイン">広告・デザイン</span>
+      <span class="filter-tag" data-filter="人材・採用支援">人材・採用</span>
+      <span class="filter-tag" data-filter="コンサルティング">コンサル</span>
+      <span class="filter-count">全 <span id="company-count">6</span> 社</span>
+    </div>
+    <div class="filter-need-bar">
+      <span class="filter-need-label">ニーズ：</span>
+      <span class="filter-need-tag" data-need="配送業者">求む：配送業者</span>
+      <span class="filter-need-tag" data-need="IT開発">求む：IT開発</span>
+      <span class="filter-need-tag" data-need="採用支援">求む：採用支援</span>
+      <span class="filter-need-tag" data-need="デザイン制作">求む：デザイン制作</span>
+      <span class="filter-need-tag filter-offer-tag" data-offer="食品卸">対応可：食品卸</span>
+      <span class="filter-need-tag filter-offer-tag" data-offer="システム保守">対応可：システム保守</span>
+    </div>
+
+    <div class="companies-grid">
+      <!-- CARD 1 -->
+      <div class="company-card" data-industry="IT・システム開発" data-needs="採用支援" data-offers="システム保守">
+        <div class="card-img"><span class="card-badge">PREMIUM</span>COMPANY IMAGE</div>
+        <div class="card-body">
+          <span class="card-category">IT・システム開発</span>
+          <div class="card-name">株式会社〇〇テクノロジー</div>
+          <div class="card-area">📍 東京都 渋谷区</div>
+          <p class="card-desc">Webシステム・業務システムの開発から保守まで一貫対応。中小企業のDX推進を支援。</p>
+        </div>
+        <div class="card-tags">
+          <span class="tag-need">求む：採用支援</span>
+          <span class="tag-offer">対応可：システム保守</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-plan premium">PREMIUM</span>
+          <a href="company-detail.html" class="card-link">詳細を見る →</a>
+        </div>
+      </div>
+      <!-- CARD 2 -->
+      <div class="company-card" data-industry="建設・工事" data-needs="配送業者" data-offers="">
+        <div class="card-img"><span class="card-badge" style="background:var(--navy2);color:#fff;">STANDARD</span>COMPANY IMAGE</div>
+        <div class="card-body">
+          <span class="card-category">建設・工事</span>
+          <div class="card-name">〇〇建設株式会社</div>
+          <div class="card-area">📍 大阪府 大阪市</div>
+          <p class="card-desc">内装・外装工事から大規模改修まで対応。創業30年の実績で地域企業を支えます。</p>
+        </div>
+        <div class="card-tags">
+          <span class="tag-need">求む：配送業者</span>
+          <span class="tag-industry">建設・工事</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-plan">STANDARD</span>
+          <a href="company-detail.html" class="card-link">詳細を見る →</a>
+        </div>
+      </div>
+      <!-- CARD 3 -->
+      <div class="company-card" data-industry="人材・採用支援" data-needs="" data-offers="採用支援">
+        <div class="card-img"><span class="card-badge" style="background:var(--navy2);color:#fff;">LITE</span>COMPANY IMAGE</div>
+        <div class="card-body">
+          <span class="card-category">人材・採用支援</span>
+          <div class="card-name">〇〇人材サービス</div>
+          <div class="card-area">📍 長崎県 長崎市</div>
+          <p class="card-desc">高卒・新卒採用に特化した採用支援サービス。地元企業の人材不足を解決します。</p>
+        </div>
+        <div class="card-tags">
+          <span class="tag-offer">対応可：採用支援</span>
+          <span class="tag-industry">人材・採用</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-plan">LITE</span>
+          <a href="company-detail.html" class="card-link">詳細を見る →</a>
+        </div>
+      </div>
+      <!-- CARD 4 -->
+      <div class="company-card" data-industry="広告・デザイン" data-needs="IT開発" data-offers="デザイン制作">
+        <div class="card-img"><span class="card-badge">PREMIUM</span>COMPANY IMAGE</div>
+        <div class="card-body">
+          <span class="card-category">広告・デザイン</span>
+          <div class="card-name">〇〇クリエイティブ</div>
+          <div class="card-area">📍 福岡県 福岡市</div>
+          <p class="card-desc">ブランディングからWEB・印刷物まで、企業の販促活動をトータルサポートします。</p>
+        </div>
+        <div class="card-tags">
+          <span class="tag-need">求む：IT開発</span>
+          <span class="tag-offer">対応可：デザイン制作</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-plan premium">PREMIUM</span>
+          <a href="company-detail.html" class="card-link">詳細を見る →</a>
+        </div>
+      </div>
+      <!-- CARD 5 -->
+      <div class="company-card" data-industry="物流・運送" data-needs="食品卸" data-offers="配送業者">
+        <div class="card-img"><span class="card-badge" style="background:var(--navy2);color:#fff;">STANDARD</span>COMPANY IMAGE</div>
+        <div class="card-body">
+          <span class="card-category">物流・運送</span>
+          <div class="card-name">〇〇ロジスティクス</div>
+          <div class="card-area">📍 愛知県 名古屋市</div>
+          <p class="card-desc">九州〜関東エリアの配送・倉庫管理。小ロットから大型まで柔軟に対応します。</p>
+        </div>
+        <div class="card-tags">
+          <span class="tag-need">求む：食品卸</span>
+          <span class="tag-offer">対応可：配送業者</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-plan">STANDARD</span>
+          <a href="company-detail.html" class="card-link">詳細を見る →</a>
+        </div>
+      </div>
+      <!-- CARD 6 -->
+      <div class="company-card" data-industry="コンサルティング" data-needs="IT開発" data-offers="">
+        <div class="card-img"><span class="card-badge" style="background:var(--navy2);color:#fff;">LITE</span>COMPANY IMAGE</div>
+        <div class="card-body">
+          <span class="card-category">コンサルティング</span>
+          <div class="card-name">〇〇経営コンサルタント</div>
+          <div class="card-area">📍 長崎県 諫早市</div>
+          <p class="card-desc">中小企業の経営改善・補助金申請・事業計画策定を専門家がサポートします。</p>
+        </div>
+        <div class="card-tags">
+          <span class="tag-need">求む：IT開発</span>
+          <span class="tag-industry">コンサルティング</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-plan">LITE</span>
+          <a href="company-detail.html" class="card-link">詳細を見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ページネーション -->
+    <div style="text-align:center; margin-top:56px; display:flex; gap:8px; justify-content:center;">
+      <span style="width:40px;height:40px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;border-radius:3px;font-weight:700;font-size:.88rem;">1</span>
+      <a href="#" style="width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;border-radius:3px;font-size:.88rem;color:var(--gray);">2</a>
+      <a href="#" style="width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;border-radius:3px;font-size:.88rem;color:var(--gray);">3</a>
+      <a href="#" style="width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;border-radius:3px;font-size:.88rem;color:var(--gray);">→</a>
+    </div>
+  </div>
+</section>
+
+<!-- 掲載CTA -->
+<div class="cta-section">
+  <div class="cta-free-label">🎉 先着100社限定 無料キャンペーン</div>
+  <h2>貴社もここから採用に掲載しませんか</h2>
+  <p>先着100社は掲載料<strong style="color:var(--gold);">完全無料</strong>。残り100社分の無料枠があります。</p>
+  <a href="register.html" class="btn-navy">今すぐ無料で掲載する →</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">ここから<span>採用</span></div>
+        <p class="footer-tagline">企業と企業をつなぐ、<br>BtoBビジネスマッチングプラットフォーム。</p>
+      </div>
+      <div class="footer-col">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="companies.html">企業を探す</a></li>
+          <li><a href="index.html#pricing">料金プラン</a></li>
+          <li><a href="register.html">掲載申し込み</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">運営会社</a></li>
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="#">よくある質問</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 ここから採用 All Rights Reserved.</span>
+      <span>Operated by 島崎</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const cards = Array.from(document.querySelectorAll('.company-card'));
+  let activeIndustry = 'all';
+  let activeNeed = null;
+  let activeOffer = null;
+
+  function filterCards() {
+    let visible = 0;
+    cards.forEach(card => {
+      const industry = card.dataset.industry || '';
+      const needs = card.dataset.needs || '';
+      const offers = card.dataset.offers || '';
+
+      const matchIndustry = activeIndustry === 'all' || industry === activeIndustry;
+      const matchNeed = !activeNeed || needs.includes(activeNeed);
+      const matchOffer = !activeOffer || offers.includes(activeOffer);
+
+      const show = matchIndustry && matchNeed && matchOffer;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    document.getElementById('company-count').textContent = visible;
+  }
+
+  // 業種フィルター
+  document.querySelectorAll('.filter-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
+      activeIndustry = tag.dataset.filter || 'all';
+      filterCards();
+    });
+  });
+
+  // ニーズタグフィルター
+  document.querySelectorAll('.filter-need-tag[data-need]').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const val = tag.dataset.need;
+      if (activeNeed === val) {
+        activeNeed = null;
+        tag.classList.remove('active');
+      } else {
+        document.querySelectorAll('.filter-need-tag[data-need]').forEach(t => t.classList.remove('active'));
+        activeNeed = val;
+        tag.classList.add('active');
+      }
+      filterCards();
+    });
+  });
+
+  // 対応可タグフィルター
+  document.querySelectorAll('.filter-need-tag[data-offer]').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const val = tag.dataset.offer;
+      if (activeOffer === val) {
+        activeOffer = null;
+        tag.classList.remove('active');
+      } else {
+        document.querySelectorAll('.filter-need-tag[data-offer]').forEach(t => t.classList.remove('active'));
+        activeOffer = val;
+        tag.classList.add('active');
+      }
+      filterCards();
+    });
+  });
+</script>
+</body>
+</html>
