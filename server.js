@@ -39,6 +39,6 @@ app.post('/api/register', (req, res) => {
   res.redirect('/register.html?status=success');
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ ここから採用 サーバー起動: http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ ここから採用 サーバー起動: http://0.0.0.0:${PORT}`);
 });
