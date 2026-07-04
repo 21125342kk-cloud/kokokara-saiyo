@@ -427,6 +427,16 @@
       filterCards();
     });
   });
+
+  // カード全体クリックで詳細ページへ
+  document.querySelectorAll('.company-card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return; // リンククリックはそのまま
+      const link = card.querySelector('.card-link');
+      if (link) window.location.href = link.href;
+    });
+  });
 </script>
 </body>
 </html>
