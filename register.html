@@ -72,12 +72,12 @@
         <div class="form-group">
           <label>ご希望のプラン <span class="req">必須</span></label>
           <div class="plan-select-grid">
-            <label class="plan-option">
+            <label class="plan-option selected">
               <input type="radio" name="plan" value="lite" checked>
               <div class="plan-option-name">LITE</div>
               <div class="plan-option-price">¥5,000<span>/月</span></div>
             </label>
-            <label class="plan-option selected">
+            <label class="plan-option">
               <input type="radio" name="plan" value="standard">
               <div class="plan-option-name">STANDARD</div>
               <div class="plan-option-price">¥12,000<span>/月</span></div>
@@ -274,6 +274,27 @@
 
 <script src="js/main.js"></script>
 <script>
+  // プラン選択UI
+  const planPrices = {
+    lite: '¥5,000<span> / 月（税込 ¥5,500）</span>',
+    standard: '¥12,000<span> / 月（税込 ¥13,200）</span>',
+    premium: '¥30,000<span> / 月（税込 ¥33,000）</span>'
+  };
+  document.querySelectorAll('.plan-option input[type=radio]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.plan-option').forEach(el => el.classList.remove('selected'));
+      radio.closest('.plan-option').classList.add('selected');
+      document.getElementById('selected-price').innerHTML = planPrices[radio.value];
+    });
+  });
+
+  // URLパラメータでプランを自動選択
+  const urlPlan = new URLSearchParams(location.search).get('plan');
+  if (urlPlan && planPrices[urlPlan]) {
+    const target = document.querySelector(`.plan-option input[value="${urlPlan}"]`);
+    if (target) { target.checked = true; target.dispatchEvent(new Event('change')); }
+  }
+
   // 登録結果のメッセージ表示
   const params = new URLSearchParams(location.search);
   const msg = document.getElementById('status-msg');
